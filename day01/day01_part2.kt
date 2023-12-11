@@ -9,6 +9,7 @@ private fun extractCalibrationValue(calibrationValue: String): String{
     possibleSpelledNumbers.forEachIndexed { key, value ->
         replaceWith = replaceWith.replace(value, (key + 1).toString())
     }
+    //fonctionne pas parce que ma loop prend en ordre des spelled numbers et non en ordre d'apparition.
    return "${replaceWith.first { Character.isDigit(it) }}${replaceWith.last { Character.isDigit(it) }}"
 }
 
